@@ -1,0 +1,58 @@
+@charset "utf-8";
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+.type {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  width: 70%;
+}
+#typed1 {
+  color: #fff;
+  font-size: 2.5em;
+  line-height: 70px;
+  display: block;
+  text-align: center;
+}
+#typed1 em {
+  font-weight: bold;
+  font-style: normal;
+  color: #f0c6c3;
+}
+#typed1 span.p {
+  font-size: 20px;
+}
+.type a {
+  margin-bottom: 25px;
+  background-color: #fff;
+  font-size: 1em;
+  border-radius: 5px;
+  border: #ccc;
+  text-transform: uppercase;
+  z-index: 1;
+  outline: none;
+  transition: 0.5s;
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-weight: bold;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 50px 0;
+}
+.type a:hover {
+  color: #fff;
+  box-shadow: -85px 0 0 0 inset #3d3d3d, 85px 0 0 0 inset #3d3d3d;
+}
+.typed-cursor {
+    display: none;
+  }

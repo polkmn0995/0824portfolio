@@ -1,0 +1,156 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+body {
+  background-color: #f7f8f9;
+}
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  padding: 10px 0;
+  z-index: 99;
+  top: 0;
+}
+.header-wrap {
+  /* 반응형 좌우에 약간의 여백이 존재함 */
+  padding: 0 2%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .nav {
+  flex-basis: 50%;
+}
+.header .nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+.header .nav ul li {
+  position: relative;
+}
+.header .nav ul li::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s;
+  transform: scaleX(0);
+}
+.header .nav ul li a {
+  color: #333;
+}
+.header .nav ul li.on {
+  font-weight: bold;
+}
+.header .nav ul li.on a {
+  color: #000;
+}
+.header .nav ul li.on::after,
+.header .nav ul li:hover::after {
+  transform: scalex(1);
+}
+.header .ect {
+  flex-basis: 10%;
+}
+.header .ect ul {
+  display: flex;
+  justify-content: space-between;
+}
+.header .ect ul li {
+  flex-basis: 50%;
+  text-align: center;
+  position: relative;
+}
+.header .ect ul li i {
+  font-size: 1.5em;
+}
+.header .ect ul li ul {
+  position: absolute;
+  width: 80px;
+  top: 30px;
+  left: -10px;
+  background-color: #9daefa;
+  border-radius: 5px;
+  transition: 0.5s;
+  flex-wrap: wrap;
+  height: 0;
+  overflow: hidden;
+}
+.header .ect ul li ul li {
+  flex-basis: 100%;
+  line-height: 40px;
+}
+.header .ect ul li:hover ul {
+  height: 80px;
+}
+.header .ect ul li ul li.on,
+.header .ect ul li ul li:hover {
+  font-weight: bold;
+}
+
+.content {
+  width: 100%;
+  padding: 0 2%;
+  box-sizing: border-box;
+}
+.content .content-wrap {
+  max-width: 1200px;
+  margin: 71px auto;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: 25px 0;
+  background-color: #fff;
+  border-radius: 7px;
+  border: #ccc;
+  box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.2);
+}
+.content .title {
+  text-align: center;
+  flex-basis: 100%;
+  font-size: 2em;
+}
+.content .title h3 {
+  position: relative;
+}
+.content .title h3::after {
+  content: "";
+  width: 5%;
+  height: 2px;
+  background-color: #000;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+}
+.profile-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.profile-content {
+  background-color: #fff;
+  border-radius: 7px;
+  border: 1px solid #ccc;
+  padding: 2px 3px 0px;
+  box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  overflow: hidden;
+}
